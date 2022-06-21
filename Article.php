@@ -2,7 +2,7 @@
 
 /**
  * @autores alf
- * @copyright 2020
+ * @copyright 2022
  * @ver 1.0
  */
 
@@ -14,7 +14,7 @@ use classes\db\LayerDB;
 ini_set("error_reporting", E_ALL);
 
 
-class Artigos extends LayerDB{
+class Article extends LayerDB{
  
   public $instrucaoSQL = array( "verArtigos" => 'SELECT `codArtigo`, artigos.`codCategoria`, `Resumo`, `Descricao`, `Titulo`, artigos.`createdStamp`, artigos.`owne`, 
                                                  artigos.`active` FROM `artigos` 
@@ -32,7 +32,6 @@ class Artigos extends LayerDB{
  public function doAction($accao, $parameters=""){
     switch ($accao){
       case "adicionarAlbum":
-
             $this->execQuery($accao, $parameters);
             break;
       case "verArtigos":

@@ -20,7 +20,15 @@
 cms is a basic cms for sites
 The idea is to user articles arrange in categories to display on teh site
 
-Documentation can be found at https://github.com/alfZone/graphics/wiki
+extra class requeriments:
+  db
+    tableDB.php
+    table.html
+    Database.php
+    LayerDB.php
+  simplehtmldom
+  string
+  
 
 2 - What's new
   Version 1.0 

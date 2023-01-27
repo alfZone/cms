@@ -1,1 +1,1 @@
-submodule add https://github.com/alfZone/classes /.
+git submodule add https://github.com/alfZone/classes /

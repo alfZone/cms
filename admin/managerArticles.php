@@ -18,9 +18,9 @@ $table->setTitulo("Articles");
 
 $table->preparaTabela("cmsArticles");
 $table->setFieldsAtive("codArticle,codCategorie,resume, description, title, active",'see');
-$table->setFieldsAtive("resume, description, title, active", 'new');
-$table->setFieldsAtive("resume, description, title, active", 'edt');
-$table->setFieldsAtive("resume, description, title, active", 'csv');
+$table->setFieldsAtive("resume,codCategorie, description, title, active", 'new');
+$table->setFieldsAtive("resume,codCategorie, description, title, active", 'edit');
+$table->setFieldsAtive("resume,codCategorie, description, title, active", 'csv');
 
 //$table->setLabel('id',"#ID");
 //$table->setLabel('tipo',"Tipo de Utilizador");

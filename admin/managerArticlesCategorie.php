@@ -14,7 +14,7 @@ $table->setTemplate(_CAMINHO_MANUTENCAO . "tables.html");
 $table->setTitulo("Categories of Articles");
 //`codCategorie`, `father`, `categorie`, `createdStamp`, `owne`, `active`
 
-$table->preparaTabela("cmsArticlesCategorie");
+$table->prepareTable("cmsArticlesCategorie");
 $table->setFieldsAtive("codCategorie,categorie, father, active",'see');
 $table->setFieldsAtive("categorie, father, active", 'new');
 $table->setFieldsAtive("categorie, father, active", 'edt');

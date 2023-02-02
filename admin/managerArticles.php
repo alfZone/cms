@@ -10,13 +10,12 @@ require_once __DIR__ . '/../autoload.php';
 use classes\db\TableBD;
 
 $table= new TableBD();
-$table= new TableBD();
 $table->setTemplate(_CAMINHO_MANUTENCAO . "tables.html");
 //$tabela->setTemplate("../classes/db/TableBD.html");
 $table->setTitulo("Articles");
 //`codArticle`, `codCategorie`, `resume`, `description`, `title`, `createdStamp`, `owne`, `active`
 
-$table->preparaTabela("cmsArticles");
+$table->prepareTable("cmsArticles");
 $table->setFieldsAtive("codArticle,codCategorie,resume, description, title, active",'see');
 $table->setFieldsAtive("resume,codCategorie, description, title, active", 'new');
 $table->setFieldsAtive("resume,codCategorie, description, title, active", 'edit');

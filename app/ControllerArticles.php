@@ -18,11 +18,21 @@ use classes\cms\Articles;
 class ControllerArticles{
 
 	public function seeArticlesList($cat){
-        $p['cat']=$cat;
-        $artigos=new Artigos("seeArticlesOfCategorie",$p);
-        echo $artigos->webService();
+		$p['cat']=$cat;
+		$artigos=new Artigos("seeArticlesOfCategorie",$p);
+		echo $artigos->webService();
 	}
 
+	public function numCategorie(){
+		$artigos=new Article("numCategorie");
+		echo $artigos->webService();
+	}
+  
+  	public function numArticles(){
+		$artigos=new Article("numArticles");
+		echo $artigos->webService();
+	}
+	
 	public function seeArticlesList2($cat){
 		$p['cat']=$cat;
 		$artigos=new Artigos("verArtigos2",$p);

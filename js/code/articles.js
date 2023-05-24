@@ -1,24 +1,42 @@
+ var c = c || new config();
 
-const seeArticlesListCat1 = async() =>{
+const numCategorie = async() =>{
   //console.log("aaaa");
 
-  const response = await fetch(window.location.protocol + "//" + window.location.host + "/2do/"+`public/artigos/1/lista`)
+  const response = await fetch(`${c.url}public/numCategorie`)
   const servicos = await response.json()
 
   let strHtml = `
-        <option value=0>(Escolha um Artigo)</option>
-           `
+                `
   if (servicos[0].numElements > 0) {
     
     for (const servico of servicos) {
           strHtml += `
-                  <option value=${servico.codArtigo}>${servico.Titulo}</option>
+                  ${servico.numCategorie}
                      `
     }
             
   }
-  document.getElementById("codArtigo").innerHTML = strHtml
+  document.getElementById("numCategorie").innerHTML = strHtml
+}
 
+const numArticles = async() =>{
+  //console.log("aaaa");
 
+  const response = await fetch(`${c.url}public/numArticles`)
+  const servicos = await response.json()
+
+  let strHtml = `
+                `
+  if (servicos[0].numElements > 0) {
+    
+    for (const servico of servicos) {
+          strHtml += `
+                  ${servico.numArticles}
+                     `
+    }
+            
+  }
+  document.getElementById("numArticles").innerHTML = strHtml
 }
 

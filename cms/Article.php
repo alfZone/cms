@@ -22,6 +22,8 @@ class Article extends LayerDB{
                               "verArtigos2" => 'SELECT `codArticle`, cmsArticles.`codCategorie`, `resume`, `description`, `title`, cmsArticles.`createdStamp`, cmsArticles.`owne`, cmsArticles.`active` FROM `cmsArticles` 
                                                 inner join cmsArticlesCategorie on cmsArticlesCategorie.codCategorie=cmsArticles.codCategorie 
                                                 WHERE cmsArticlesCategorie.codCategorie=:cat and cmsArticles.`active`=1',
+                               "numCategorie" => 'SELECT count(`codCategorie`) as numCategorie FROM `cmsArticlesCategorie`;',
+                               "numArticles" => 'SELECT count(`codArticle`) as numArticles FROM `cmsArticles`;',
                               );
 
   
